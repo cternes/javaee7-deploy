@@ -54,6 +54,9 @@
 								def source = new File('target/' + project.build.finalName + '.war');
 								def target = new File('${glassfish.path}' + '/' + project.build.finalName + '.war');
 
+								//undeploy
+                                target.delete();
+								
 								def input = source.newDataInputStream()
 								def output = target.newDataOutputStream()
 
